@@ -55,7 +55,7 @@ const wijnen = {
 };
 
 // Hier ga ik de functie definieren die in werking word gezet als je op de button hebt geklikt. 
-function showWineAdvice() {
+function laatwijnadvieszien() {
     // Door op de button te klikken gaat de functie in werking. Hij haalt eerst de keuzes op die je in .wijnform gemaakt hebt. 
     const form = document.querySelector('.wijnform');
     // Hiermee worden alle keuzes die je hebt gemaakt gecontroleerd en opgehaald. 
@@ -95,12 +95,10 @@ function showWineAdvice() {
             }
         }
     }
-    // Haal het section-element op waar de wijnadviezen worden weergegeven
+    // Definieer wat het wijnadviessection is en haal op. 
     const wijnadviessection = document.querySelector('.wijnadvies');
-        
-    // Maak de inhoud van het adviessection-element leeg
+    // Hier word de inhoud van het .wijnavies sectionelement leeggemaakt zodat er een nieuw advies kan worden laten zien. 
     wijnadviessection.innerHTML = '';
-
     // Voor elke wijn die geselecteerd is, word een section element gemaakt. Vervolgens word de wijnimage en text opgehaald en toegevoegd als child. 
     geselecteerdewijnen.forEach(wijn => {
         const wijnsection = document.createElement('section');
@@ -114,11 +112,10 @@ function showWineAdvice() {
         wijnsection.appendChild(wijnnaam);
         wijnadviessection.appendChild(wijnsection);
     });
-
-    // Speel het proostgeluid af
+    // Hier word het proostgeluid gedefinieerd en afgespeeld.
     const proostgeluid = document.querySelector('.proostgeluid');
     proostgeluid.play();
-    // Als niet alle opties zijn geselecteerd, word dit berich laten zien
+    // Als niet alle opties zijn geselecteerd, word dit bericht laten zien.
         } else {
     alert('Selecteer alsjeblieft een optie in alle categorieën.');
     }
