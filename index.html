@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fine Wine Selector</title>
-        <link rel="icon" type="images" href="/images/wijnadviseur.png">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <form class="wijnform">
-            <section>
-                <h1>Fine Wine Selector</h1>
-            </section>
-            <section>
-                <h3>Categorie</h3>
-                <label><input type="radio" name="categorie" value="rood"> Rood</label>
-                <label><input type="radio" name="categorie" value="wit"> Wit</label>
-            </section>
-            <section>
-                <h3>Smaak</h3>
-                <label><input type="radio" name="smaak" value="droog"> Droog</label>
-                <label><input type="radio" name="smaak" value="zoet"> Zoet</label>
-            </section>
-            <section>
-                <h3>Prijs</h3>
-                <label><input type="radio" name="prijs" value="onder15"> Onder de 15 euro</label>
-                <label><input type="radio" name="prijs" value="boven15"> Boven de 15 euro</label>
-            </section>
-            <button type="button" onclick="laatwijnadvieszien()">TOON ADVIES</button>
-        </form>
-        <section class="wijnadvies"></section>
-        <audio class="proostgeluid" src="images/audiofragment.mp3"></audio>
-        <script src="index.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Wine Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="wijnform">
+        <section>
+            <h1>Fine Wine Selector</h1>
+        </section>
+        <section>
+            <h3>Categorie</h3>
+            <label><input type="radio" name="categorie" value="rood"> Rood</label>
+            <label><input type="radio" name="categorie" value="wit"> Wit</label>
+        </section>
+        <section>
+            <h3>Smaak</h3>
+            <label><input type="radio" name="smaak" value="droog"> Droog</label>
+            <label><input type="radio" name="smaak" value="zoet"> Zoet</label>
+        </section>
+        <section>
+            <h3>Prijs</h3>
+            <label><input type="radio" name="prijs" value="onder15"> Onder de 15 euro</label>
+            <label><input type="radio" name="prijs" value="boven15"> Boven de 15 euro</label>
+        </section>
+        <button type="button" id="toonadviesbutton">TOON ADVIES</button>
+    </form>
+    <section class="wijnadvies"></section>
+    <audio class="proostgeluid" src="images/audiofragment.mp3"></audio>
+    <script src="index.js"></script>
+</body>
 </html>
